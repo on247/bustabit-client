@@ -1,0 +1,1366 @@
+@import "./customizations.scss";
+
+$border-color: #666666;
+$bg-color: #404040;
+$brand-color: #53DCCD;
+$error-color: #ff5a5f;
+$modal-bg: #f7f9f9;
+$color-red: #ff5a5f;
+$color-green: #2ecc71;
+$color-blue: #3498db;
+$text-color: #EFEFAF;
+
+/* To hide the y axis scrollbar in the main container so it doesn't add space */
+body::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+}
+
+body {
+  background-image: linear-gradient(to bottom,$bg-color, $border-color);
+  background-size: auto 2000px;
+}
+
+@font-face {
+  font-family: 'Lato-Bold';
+  src: url('../../public/fonts/Lato/Lato-Bold.eot');
+  src: url('../../public/fonts/Lato/Lato-Bold.woff2') format('woff2'),
+  url('../../public/fonts/Lato/Lato-Bold.woff') format('woff'),
+  url('../../public/fonts/Lato/Lato-Bold.ttf') format('truetype'),
+  url('../../public/fonts/Lato/Lato-Bold.svg#Lato-Bold') format('svg'),
+  url('../../public/fonts/Lato/Lato-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/Lato/Lato-Regular.eot');
+  src: url('../../public/fonts/Lato/Lato-Regular.woff2') format('woff2'),
+  url('../../public/fonts/Lato/Lato-Regular.woff') format('woff'),
+  url('../../public/fonts/Lato/Lato-Regular.ttf') format('truetype'),
+  url('../../public/fonts/Lato/Lato-Regular.svg#Lato-Regular') format('svg'),
+  url('../../public/fonts/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Colors */
+
+
+.green-color {
+  color: $color-green;
+}
+
+.red-color {
+  color: $color-red;
+}
+
+.gray-color {
+  color: darkgray;
+}
+
+/* tags */
+.green-tag {
+  color: $color-green;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.red-tag {
+  color: darkred;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+.key-muted {
+  color: lighten($border-color,10%);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .key-muted {
+    color: lighten($border-color,10%);
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+}
+
+.bold {
+  font-weight: 600;
+}
+
+
+hr.hr-light {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.bits-color {
+  color: orange;
+}
+
+.valor-color {
+  color: $error-color;
+}
+
+.silver-color {
+  color: lightgrey;
+}
+
+// Custom Scroll
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: darken($bg-color, 5%);
+}
+
+::-webkit-scrollbar-track {
+  background: $border-color;
+}
+
+::-webkit-scrollbar-button {
+  background: $bg-color;
+  height: 15px;
+  border-radius: 50%;
+}
+
+// Containers
+
+.component-box {
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  padding-left: 0px;
+  padding-right: 0px;
+  height: 100%;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .component-box.graphic-display {
+
+    margin-bottom: 5px;
+    border-bottom: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .component-box.bet-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid $border-color;
+    border-top: 0px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.component-box-row {
+  border: 1px solid $border-color;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  overflow-y: auto;
+}
+
+
+//For containing the Chat & History widgets
+.component-box-bottom {
+  border-top: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+  .component-box-bottom {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
+
+.inner-box-three {
+  display: flex;
+  flex-basis: 4%;
+}
+
+.inner-box-four {
+  display: flex;
+  flex-basis: 96%;
+  width: 100%;
+  border-left: 1px solid $border-color;
+
+}
+
+
+// Buttons
+
+.btn-lg {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+// Loading
+
+
+.loading-animation-blue {
+  color: $color-blue;
+  background: transparent;
+  border: 0px;
+}
+
+.loading-animation-red {
+  color: $color-red;
+  background: transparent;
+  border: 0px;
+}
+
+.no-btn {
+ cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+  padding: 0px 3px;
+  margin: 0px;
+  font-weight: bold;
+}
+
+// Main Buttons
+
+.btn-custom {
+  border: none;
+  font-family: inherit;
+  font-size: 1.2em;
+  cursor: pointer;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 800;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+  border-radius: 5px;
+  padding: 15px 35px 15px 70px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.btn-bet {
+  background: $brand-color;
+  color: #fff;
+  box-shadow: 0 5px darken($brand-color, 15%);
+}
+
+.btn-cash-out {
+  background: #ff5a5f;
+  color: #fff;
+  box-shadow: 0 5px #e55155;
+}
+
+@media (max-width: 767px) {
+  .btn-custom {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    padding: 20px 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .btn-custom {
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    padding: 15px 35px 15px 70px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+}
+
+btn-custom:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn-custom:before {
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  left: 0;
+  width: 40%;
+  font-size: 160%;
+  line-height: 0.8;
+}
+
+.btn-bet:before {
+  color: darken($brand-color, 15%);
+}
+
+.btn-cash-out:before {
+  color: #fff;
+}
+
+@media (min-width: 768px){
+  .icon-bet:before {
+    content: "\f135";
+  }
+}
+
+@media (min-width: 768px){
+  .icon-cash-out:before {
+    content: "\f256";
+  }
+}
+
+
+.btn-bet:hover, .btn-bet:focus {
+  background: darken($brand-color, 10%);
+}
+
+.btn-bet:active {
+  /*font-size: 1.5em;*/
+  box-shadow: 0 0px darken($brand-color, 15%);
+}
+
+.btn-cash-out:hover, .btn-cash-out:focus {
+  background: $color-red;
+}
+
+.btn-cash-out:active {
+  box-shadow: 0 0px darken($color-red, 15%);
+}
+
+@media (min-width: 768px) {
+  .btn-custom.btn-activated-a:before {
+    animation: scaleUp 0.5s;
+  }
+
+  .btn-custom.btn-activated-b:before {
+    animation: scaleUp2 0.5s;
+  }
+}
+
+@keyframes scaleUp {
+  80% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+@keyframes scaleUp2 {
+  80% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
+
+
+
+// Do not allow textarea resizing
+
+textarea {
+  resize: none;
+}
+
+
+// Vertical Icon Menu
+
+.vertical-icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  background-color: transparent;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.vertical-icon:hover {
+  color: $brand-color;
+}
+
+.vertical-icon:focus, .vertical-icon:active {
+  opacity: 0.5;
+}
+
+//Tables
+
+.table-light {
+  border: 1px solid $border-color;
+}
+
+.modal-body .table-light tbody  {
+  background-color: transparent;
+}
+
+.modal-body .table-light td {
+  color: $bg-color;
+}
+
+.table-light > tbody > tr:hover {
+
+  background: #f5f5f5;
+}
+
+
+.modal-body .table-light .balance-tr td {
+  color: #000;
+  font-weight: 900;
+}
+
+.table-light > tbody > tr > td > a {
+  color: $bg-color;
+}
+
+// This code makes history tables have an overflow-y scroll and a max-height
+
+/*
+.history-table {
+  background-color: $border-color;
+}
+*/
+.history-table tbody {
+  //display: block;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.history-table > thead, .history-table > tbody tr {
+  //display:table;
+  //width:100%;
+  //table-layout:fixed;
+}
+
+.history-table thead {
+  //width: calc( 100% - 10px )
+}
+
+//Modals
+
+//Changing break point of medium screen for modal
+@media (min-width: 768px) and (max-width: 991px){
+  .modal-dialog {
+    width: 766px;
+  }
+}
+
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// To modify the x style in the modal
+
+.close {
+  opacity: 0.9;
+  color: #fff;
+}
+
+.close:hover, .close:focus {
+  opacity: 0.6;
+}
+
+// Text & border color in modals
+
+.modal-header {
+  color: #fff;
+  background: $border-color;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.modal-body {
+  color: $bg-color !important;
+}
+
+.modal-body .input-group-addon {
+  color: #fff;
+  background: $border-color;
+  border: 1px solid $border-color;
+  border-right: 0px;
+}
+
+.modal-body .input-group-addon:last-child {
+  border-right: 1px solid $border-color;
+  border-left: 0px;
+}
+
+.modal-body .form-control {
+  color: $bg-color !important;
+  border: 1px solid $border-color;
+}
+
+.modal-body .input-group-btn .btn-default {
+  color: #fff !important;
+}
+
+.red-error {
+  color: $error-color;
+}
+
+.modal-body .has-error .help-block,
+.modal-body .has-error .control-label,
+.modal-body .has-error .radio,
+.modal-body .has-error .checkbox,
+.modal-body .has-error .radio-inline,
+.modal-body .has-error .checkbox-inline,
+.modal-body .has-error.radio label,
+.modal-body .has-error.checkbox label,
+.modal-body .has-error.radio-inline label,
+.modal-body .has-error.checkbox-inline label {
+  color: #a94442;
+}
+.modal-body .has-error .form-control {
+  border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+.modal-body .has-error .form-control:focus {
+  border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
+}
+.modal-body .has-error .input-group-addon {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #a94442;
+}
+.modal-body .has-error .form-control-feedback {
+  color: #a94442;
+}
+
+// Tables in Modals
+
+.modal-body td {
+  color: $text-color;
+}
+
+.modal-body tr {
+  color: $text-color;
+}
+.modal-body tbody {
+  background-color: #404040;
+}
+
+// Tabs in Modals (affects tab.js)
+
+.nav-tabs.nav-justified > li > a {
+  border-bottom: 0;
+}
+
+.nav-justified {
+  display: table;
+  table-layout: fixed;
+}
+
+.nav-justified > li {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .nav-justified > li, .nav-tabs.nav-justified > li {
+    display: table-cell;
+  }
+}
+
+.nav-tabs > li > a > span {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .nav-tabs > li > a  {
+    padding: 10px 5px;
+  }
+  .nav-tabs > li > a > span {
+    letter-spacing: 0px;
+    text-transform: capitalize;
+  }
+}
+
+// Confirmation Modal
+
+.modal-header-confirmation {
+  color: #fff;
+  background: $bg-color;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.modal-dialog-confirmation {
+  position: relative;
+  width: auto;
+  margin: 30px 10px;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog-confirmation {
+    width: 400px;
+    margin: 15vh auto;
+  }
+}
+
+.modal-backdrop {
+  z-index: 1050 !important;
+}
+
+// Chat
+
+.chat-container {
+  list-style: none;
+  padding: 5px;
+  //border-left: 1px solid $border-color;
+  //border-right: 1px solid $border-color;
+}
+
+.channel-title {
+ text-align: center;
+  margin: 0px;
+  padding: 0px 10px;
+  background-color: $border-color;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #999;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.channel-title .fa-times {
+  color: $color-red;
+}
+
+
+// Chat Rooms
+
+//sidebar
+.chat-channel-container::-webkit-scrollbar {
+  width: 0px;
+}
+.channels-show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.channels-collapse {
+  height: 0px;
+  display: none;
+}
+
+.channel-header {
+  color: #999;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+
+// add channels widget
+.chat-rooms-container {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  padding: 10px;
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  background-color: $border-color;
+  border-radius: 3px;
+}
+
+@media (max-width: 991px) {
+  .chat-rooms-container {
+    bottom: 34px;
+    right: 0px;
+  }
+}
+
+.chat-rooms-btn {
+  height: 34px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 3px;
+  border-right: 1px solid transparent; // gets rid of the border "inside" of the button, to match the div's border
+  box-shadow: 1px 0 0 0 $border-color; //adds a 1px border in the outside, to match the div
+  font-size: 1.6rem;
+}
+
+.chat-rooms-btn:hover {
+  border-right: 1px solid transparent; // gets rid of the border "inside" of the button, to match the div's border
+  box-shadow: 1px 0 0 0 $border-color; //adds a 1px border in the outside, to match the div
+}
+
+// Bet History
+
+.inner-container-bottom {
+  border-right: 1px solid $border-color;
+  //border-bottom: 1px solid $border-color;
+  border-left: 1px solid $border-color;
+  border-bottom-right-radius: 3px;
+}
+
+.table-header > tr {
+  color: #fff;
+  background-color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+.copy-btn{
+  display: block;
+  padding: 3px;
+  text-align: center;
+  color: #fff;
+  background-color: $color-blue;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 3px;
+  box-shadow: 0 4px darken($color-blue, 8%);;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 40px;
+}
+
+.copy-btn:hover {
+  background-color: darken($color-blue, 5%);
+  box-shadow: 0 3px darken($color-blue, 10%);
+  color: #fff;
+}
+
+.copy-btn:active, .btn-blue:focus {
+  box-shadow: 0px 0px darken($color-blue, 10%);
+  position: relative;
+  color: #fff;
+}
+
+
+// Chat & BetHistory switch
+
+
+.switch {
+  position: relative;
+  height: 22px;
+  width: 100px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 50px;
+  line-height: 22px;
+  font-size: 11px;
+  color: $border-color;
+  text-align: center;
+  //text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+.switch-label:active {
+  font-weight: bold;
+}
+
+.switch-label-off {
+  padding-left: 2px;
+}
+
+.switch-label-on {
+  //padding-right: 2px;
+}
+
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch-label {
+  font-weight: bold;
+  color: #000;
+  //text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  left: 50px;
+}
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+ // top: 2px;
+  left: 2px;
+  width: 50px;
+  height: 22px;
+  background: $brand-color;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, lighten($brand-color, 10%), $brand-color);
+  background-image: -moz-linear-gradient(top, lighten($brand-color, 10%), $brand-color);
+  background-image: -o-linear-gradient(top, lighten($brand-color, 10%), $brand-color);
+  background-image: linear-gradient(to bottom, lighten($brand-color, 10%), $brand-color);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+
+
+
+// Account
+
+.account-header {
+  background-color: lighten($brand-color, 35%);
+}
+
+#account-options-tabs li > a {
+  color: $bg-color;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#account-options-tabs li > a:hover {
+  color: $brand-color;
+}
+
+#account-options-tabs li.active > a {
+  color: #fff;
+}
+
+
+// FAQ
+
+hr {
+  border-color: lightgrey;
+}
+
+.nav-stacked > li > a {
+  color: $bg-color
+}
+
+.nav-stacked > li > a:hover {
+  color: darken($brand-color, 15%);
+
+}
+
+.hl-word {
+  color: darken($brand-color, 15%);
+  font-weight: 600;
+  font-style: italic;
+}
+
+
+/* Animation for Notifications */
+
+.animated {
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.bounceIn{
+  animation-duration: .75s;
+}
+
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+/* Notification */
+
+.notification-bar, .notification-bar-error {
+  position: fixed;
+  top: 52px;
+  visibility: hidden;
+  //left: 0;
+  left: 5.5%;
+  right: 0;
+  width: 30%;
+  padding: 1rem;
+  //margin: auto;
+  margin: initial;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: inherit;
+  line-height: normal;
+  font-family: inherit;
+  border-radius: 3px;
+  box-shadow: rgba(10, 10, 11, 0.121569) 0px 0px 1px 1px;
+  cursor: default;
+  z-index: 2000;
+}
+
+.notification-bar {
+  color: $bg-color;
+  background: $modal-bg;
+}
+
+.notification-bar-error {
+  color: #fff;
+  background: $color-red;
+}
+
+@media (max-width: 991px) {
+  .notification-bar, .notification-bar-error {
+    top: 43px;
+    margin: auto;
+    left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .notification-bar, .notification-bar-error {
+    width: 70%;
+  }
+}
+
+.notification-bar-error i {
+  color: #fff;
+}
+.active {
+  visibility: visible !important;
+
+}
+
+.notification-bar-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification-bar-title {
+}
+
+.notification-bar-message {
+}
+
+.notification-bar-action {
+  padding: 2px 5px;
+  margin-left: 1rem;
+  color: $color-red;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: inherit;
+  line-height: 2rem;
+  font-family: inherit;
+  letter-spacing: 0.125ex;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  float: right;
+  display: flex;
+  align-self: flex-start;
+}
+
+
+// Bet-control Tabs
+
+.bet-control-tabs {
+  margin-bottom: 15px;
+}
+
+.bet-control-tabs > li {
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-tabs.nav-justified.bet-control-tabs > li > a {
+  border-bottom: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+  border-left: 0px;
+  background-color: $border-color;
+  color: lighten($border-color, 15%);
+}
+
+
+.nav-tabs.nav-justified.bet-control-tabs > .active > a {
+  border: 0px;
+  background-color: transparent;
+  color: $brand-color;
+
+}
+
+.nav-tabs.nav-justified.bet-control-tabs > .active > a:hover {
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.nav-justified.bet-control-tabs > li, .nav-tabs.nav-justified.bet-control-tabs > li {
+  display: table-cell;
+}
+
+// AutoBet
+
+.strategy-listing {
+  border: 1px solid $border-color;
+  margin: 5px;
+  padding: 5px;
+  overflow-y: scroll;
+}
+
+// Vertical switch
+
+.tabs-left {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 1.5rem;
+  display: block;
+}
+
+.tabs-left>li {
+  float: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  //display: table-row;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: $border-color;
+  color: lighten($border-color, 15%);
+  overflow: hidden;
+}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border: 0px;
+  color: $brand-color;
+  background-color: transparent;
+  cursor: default;
+}
+
+.tabs-left>li.active,
+.tabs-left>li.active:hover,
+.tabs-left>li.active:focus {
+  background-color: transparent;
+  cursor: default;
+}
+
+.tabs-left>li>a:hover,
+.tabs-left>li>a:focus {
+  border: 0px;
+  background-color: transparent;
+}
+
+.tabs-left>li:first-child {
+  top: 0;
+  bottom: 75%;
+}
+
+.tabs-left>li:nth-child(2) {
+  top: 25%;
+  bottom: 50%;
+}
+
+.tabs-left>li:nth-child(3) {
+  top: 50%;
+  bottom: 25%;
+}
+
+.tabs-left>li:nth-child(4) {
+  top: 75%;
+  bottom: 0;
+}
+
+.tabs-left>li>a {
+  text-align: center;
+  margin: 0;
+  vertical-align: middle;
+  line-height: 3rem;
+  height: 1.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: rotate(270deg);
+  max-width: 1.5rem;
+  display: block;
+  transform-origin: 50% 50%;
+  position: absolute;
+  top: 70%;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 0px;
+  color: lighten($border-color, 15%);
+}
+
+// Friend List
+
+  .online-badge:after{
+    content: "";
+    position: absolute;
+    background: $color-green;
+    height: 1.4rem;
+    top: 2.5rem;
+    left: 2.5rem;
+    width: 1.4rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%;
+  }
+
+.offline-badge:after{
+  content: "";
+  position: absolute;
+  background: $color-red;
+  height: 1.4rem;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 1.4rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+// Popover menu
+
+.popover-menu {
+  color: $bg-color;
+}
+
+.popover-menu a {
+  color: $bg-color;
+}
+
+// Select: Overriding default
+
+select:not([multiple]) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 50%;
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
+  padding: .5em;
+  padding-right: 1.5em
+}
+
+// Input Groups -- Responsive
+
+@media (max-width:480px) {
+  .responsive-input-group.input-group .input-group-btn {
+    width:99%;
+    display:block;
+    margin-bottom:5px;
+  }
+  .responsive-input-group.input-group .input-group-btn .btn {
+    width: 40%;
+  }
+  .responsive-input-group.input-group .input-group-btn .btn:last-child {
+    //border-radius: 4px;
+  }
+  .responsive-input-group.input-group {
+    display: block
+  }
+  .responsive-input-group.input-group .input-group-addon {
+    clear: both;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    //border-radius: 4px;
+  }
+  .responsive-input-group.input-group .input-group-addon + .form-control {
+    //border-radius: 4px;
+    margin-bottom: 5px;
+  }
+}
+
+.modal-body .form-group .input-group .input-group-btn .btn-danger {
+  color: #fff !important;
+  border-color: darken($color-red, 5%);
+}
+
+.modal-body .form-group .input-group .input-group-btn .btn-info {
+  color: #fff !important;
+  border-color: darken($color-blue, 5%);
+}
+
+// Player List
+
+// Getting rid of external borders of the table so it doesn't look like a double border
+
+.table-bordered.playerlist-table {
+  border-top: 0px solid $border-color;
+  border-left: 0px solid $border-color;
+  border-right: 0px solid $border-color;
+}
+
+.table-bordered.playerlist-table > thead > tr > th:first-child {
+  border-left: 0px solid $border-color;
+}
+
+.table-bordered.playerlist-table > thead > tr > th:last-child {
+  border-right: 0px solid $border-color;
+}
+
+.table-bordered.playerlist-table > tbody > tr > td:last-child {
+  border-right: 0px solid $border-color;
+}
+
+.table-bordered.playerlist-table > tbody > tr > td:first-child {
+  border-left: 0px solid $border-color;
+}
+
+.table-bordered.playerlist-table > tbody > tr > td:last-child {
+  border-right: 0px solid $border-color;
+}

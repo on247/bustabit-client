@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAUC;EATC,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,uBAAuB;EAC5B,GAAG,EAAE,8OAI0D;EAC/D,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
+"sources": ["lato-regular.scss"],
+"names": [],
+"file": "lato-regular.css"
+}

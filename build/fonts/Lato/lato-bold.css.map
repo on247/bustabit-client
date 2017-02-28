@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAUC;EATC,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,oBAAoB;EACzB,GAAG,EAAE,4NAIuD;EAC5D,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
+"sources": ["lato-bold.scss"],
+"names": [],
+"file": "lato-bold.css"
+}

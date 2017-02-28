@@ -1,0 +1,132 @@
+$border-color: #666666;
+$bg-color: #404040;
+$brand-color: #53DCCD;
+$error-color: #ff5a5f;
+$modal-bg: #f7f9f9;
+$color-red: #ff5a5f;
+$color-green: #2ecc71;
+$color-blue: #3498db;
+$color-orange: #f39c12;
+
+/* Scaffolding */
+$text-color: #EFEFAF;
+$link-color: $brand-color;
+$link-hover-color: darken($brand-color, 15%);
+$link-hover-decoration: none;
+
+/* Components */
+$border-radius-base: 2px;
+$border-radius-large: 3px;
+$border-radius-small: 1px;
+
+/* Colors */
+$brand-success: $color-green;
+$brand-info: $color-blue;
+$brand-warning: $color-orange;
+$brand-danger: $color-red;
+
+/* Navbar */
+$navbar-default-bg: transparent;
+$navbar-height: 40px;
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0px;
+$navbar-default-border: transparent;
+$navbar-default-color: #f2f2f2;
+$navbar-default-link-color: #f2f2f2;
+$navbar-default-link-hover-color: $brand-color;
+$navbar-default-brand-color: $brand-color;
+$navbar-default-brand-hover-color: $brand-color;
+$navbar-default-toggle-hover-bg: lighten($bg-color, 15%);
+$navbar-default-toggle-icon-bar-bg: $brand-color;
+$navbar-default-toggle-border-color: $border-color;
+
+/* Navs */
+$nav-link-hover-bg: lighten($brand-color, 35%);
+
+/* Tabs */
+$nav-tabs-active-link-hover-bg: $brand-color;
+$nav-tabs-active-link-hover-color: #fff;
+$nav-tabs-border-color: transparent;
+$nav-tabs-link-hover-border-color: transparent;
+
+/* Pills */
+$nav-pills-border-radius: 0px;
+
+/* Typography */
+$font-family-base: 'Lato', sans-serif;
+
+
+/* Forms */
+$input-border: $border-color;
+$input-bg: transparent;
+$input-color: $text-color;
+$input-color-placeholder: #999;
+$input-border-radius: 2px;
+$input-border-radius-large: 3px;
+$input-border-radius-small: 1px;
+$input-border-focus: $brand-color;
+$input-group-addon-bg: $border-color;
+$input-group-addon-border-color: $border-color;
+$input-bg-disabled: lighten(transparent, 5%);
+
+/* Buttons */
+$btn-border-radius-base: 3px;
+$btn-border-radius-large: 2px;
+$btn-border-radius-small: 1px;
+
+$btn-primary-bg: #eeeeee;
+$btn-primary-color: #666666;
+$btn-primary-border: #eeeeee;
+
+$btn-default-color: #fff;
+$btn-default-bg: $border-color;
+$btn-default-border: $border-color;
+
+/* Panels */
+$panel-bg: transparent;
+$panel-default-border: $border-color;
+$panel-border-radius: 3px;
+$panel-body-padding: 6px 12px;
+$panel-default-heading-bg: $border-color;
+$panel-default-text: #fff;
+
+/* Tables */
+$table-bg: transparent;
+$table-bg-accent: lighten($border-color, 5%);
+$table-bg-hover: #333;
+$table-border-color: $border-color;
+$table-bg-active: $brand-color;
+
+
+/* Modals */
+$modal-content-bg: $modal-bg;
+$modal-content-border-color: $border-color;
+$modal-header-border-color: transparent;
+$modal-footer-border-color: $border-color;
+
+/* Type */
+$hr-border: $border-color;
+
+/* Grid system */
+$grid-gutter-width: 20px;
+$grid-columns: 24;
+$grid-float-breakpoint: 992px;
+
+/* List Group */
+$list-group-bg: transparent;
+$list-group-border: $border-color;
+$list-group-active-border: $border-color;
+$list-group-hover-bg: $border-color;
+$list-group-link-color: $text-color;
+$list-group-link-hover-color: $brand-color;
+
+/* Wells */
+$well-bg: transparent;
+$well-border: $border-color;
+
+
+$icon-font-path: "../../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
+
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+

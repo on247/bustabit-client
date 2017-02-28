@@ -1,0 +1,4 @@
+node_modules/
+.idea
+src/sass/app.css
+src/sass/app.css.map

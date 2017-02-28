@@ -1,0 +1,39 @@
+{
+  "name": "bustabit-client",
+  "version": "0.1.0",
+  "homepage": "https://www.bustabit.com",
+  "description": "Client for bustabit",
+  "private": true,
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.6.3",
+    "node-sass": "^4.5.0",
+    "qrcode.react": "^0.6.1",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-addons-transition-group": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
+    "react-confirm": "^0.1.14",
+    "react-dom": "^15.4.2",
+    "react-grecaptcha": "^1.1.4",
+    "react-highcharts": "^11.5.0",
+    "react-notification": "^6.6.0",
+    "react-router": "^3.0.2",
+    "react-scripts": "0.8.5",
+    "speakeasy": "^2.0.0",
+    "timeago-react": "^1.0.7",
+    "work-token": "^1.0.2"
+  },
+  "dependencies": {
+
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "postinstall": "npm run sass",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "sass": "node-sass --precision 8 src/sass/app.scss src/sass/app.css",
+    "sass-dev": "node-sass --watch --precision 8 src/sass/app.scss src/sass/app.css",
+    "eject": "react-scripts eject"
+  }
+}
