@@ -5,7 +5,7 @@ import socket from '../../socket'
 import chat  from '../../core/chat'
 import userInfo from '../../core/userInfo'
 import refresher from '../../refresher'
-
+import { formatBalance } from '../../util/belt'
 
 class AddChat extends Component {
   constructor(props) {
@@ -46,14 +46,14 @@ class AddChat extends Component {
 		);
 
     return p.catch(err => {
-    	if (err.startsWith('NOT_WAGERED_ENOUGH')) {
-				notification.setMessage(<span><span className="red-tag">Error </span> To be able to chat you need to wager at least 1000 bits.
-					Please wager {parseFloat(err.slice(19))/100}
-				{parseFloat(err.slice(19))/100 >= 2 ? ' more bits.' : ' more bit.'}
-				</span>, 'error');
+    	const prefix = 'NOT_WAGERED_ENOUGH:';
+
+    	if (typeof err === 'string' && err.startsWith(prefix)) {
+				const amount = err.slice(prefix.length);
+				notification.setMessage(<span><span className="red-tag">Error </span> In order to prevent spam, we require that you wager at least { formatBalance(amount) } bits more in order to chat</span>, 'error');
 			} else {
-					console.error(err);
-					notification.setMessage(<span><span className="red-tag">Error </span> Unexpected server error: {err}.</span>, 'error');
+				console.error(err);
+				notification.setMessage(<span><span className="red-tag">Error </span> Unexpected server error: {err}.</span>, 'error');
 			}
     })
   }
